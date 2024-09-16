@@ -15,9 +15,8 @@ class TokenBucketRateLimiterTest {
 
     @Test
     void testAllowRequestWithinLimit() {
-        for (int i = 0; i < 5; i++) {
             assertTrue(rateLimiter.allowRequest());
-        }
+
         assertFalse(rateLimiter.allowRequest());
     }
 

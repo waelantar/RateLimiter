@@ -31,7 +31,7 @@ class FixedWindowRateLimiterTest {
         FixedWindowRateLimiter rateLimiter = new FixedWindowRateLimiter(5, 1);  // Create new instance
 
         // Test first 5 requests within limit
-        for (int i = 0; i < 20000; i++) {
+        for (int i = 0; i < 5; i++) {
             assertTrue(rateLimiter.allowRequest(), "Request " + (i + 1) + " should be allowed");
         }
 
